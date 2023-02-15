@@ -1,0 +1,11 @@
+{
+  //"$schema": "https://schemas.specsolutions.eu/deveroom-config-latest.json",
+  "$schema": "https://specflow.org/specflow-config.json",
+
+  "specFlow": {
+    "isSpecFlowProject": true,
+    "generatorFolder": "D:\\SpecFlowGenerator",
+    "traits": [ "DesignTimeFeatureFileGeneration" ]
+  }
+
+}

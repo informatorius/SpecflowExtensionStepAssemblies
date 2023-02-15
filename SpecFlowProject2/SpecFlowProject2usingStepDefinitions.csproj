@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<LangVersion>latest</LangVersion>
+	<BaseOutputPath>C:\Users\z002rxur\source\repos\SpecFlowProject1\bin</BaseOutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\bin\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\bin\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="StepDefinitions">
+      <HintPath>..\..\SpecFlowProject1\bin\Debug\net48\StepDefinitions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\bin\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\Calculator.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Calculator.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Features\Calculator.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Calculator.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
